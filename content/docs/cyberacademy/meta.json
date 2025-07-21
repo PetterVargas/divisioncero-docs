@@ -1,0 +1,11 @@
+{
+  "title": "CyberAcademy",
+  "description": "Aprende resolviendo problemas",
+  "icon": "Building",
+  "root": true,
+  "pages": [
+    "---Introduction---",
+    "index",
+    "conventions"
+  ]
+}
