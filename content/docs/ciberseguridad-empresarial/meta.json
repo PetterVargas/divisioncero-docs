@@ -1,0 +1,11 @@
+{
+    "title": "Ciberseguridad empresarial",
+    "description": "Automatización en Ciberseguridad",
+    "icon": "Cuboid",
+    "root": true,
+    "pages": [
+      "---Guide---",
+      "index",
+      "services"
+    ]
+  }

@@ -1,0 +1,11 @@
+{
+  "title": "Cybersecurity Kudo",
+  "description": "Libro de Ciberseguridad",
+  "icon": "Building",
+  "root": true,
+  "pages": [
+    "---Introduction---",
+    "index",
+    "conventions"
+  ]
+}
