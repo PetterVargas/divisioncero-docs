@@ -1,0 +1,16 @@
+{
+  "title": "Ciberseguridad Kudo",
+  "description": "Libro de Ciberseguridad",
+  "icon": "Book",
+  "root": true,
+  "pages": [
+    "---Introducción---",
+    "index",
+    "dominios-kudo",
+    "responsabilidad-compartida",
+    "---Documentos---",
+    "politicas",
+    "---Línea Base---",
+    "lineas-base-dominios"
+  ]
+}

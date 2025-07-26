@@ -4,8 +4,8 @@
   "icon": "Building",
   "root": true,
   "pages": [
-    "---Introduction---",
+    "---Introducción---",
     "index",
-    "conventions"
+    "convenciones"
   ]
 }

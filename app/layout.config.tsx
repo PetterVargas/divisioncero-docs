@@ -47,7 +47,7 @@ export const baseOptions: BaseLayoutProps = {
     {
       icon: <BookIcon />,
       text: 'Kudo',
-      url: '/docs/cybersecurity-kudo',
+      url: '/docs/kudo',
       secondary: false,
     },
     {

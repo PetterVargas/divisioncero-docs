@@ -146,7 +146,7 @@ export default function HomePage() {
           </Link>
 
           <Link 
-            href="/docs/cybersecurity-kudo" 
+            href="/docs/kudo" 
             className="group flex flex-col gap-2 p-6 rounded-lg border border-border hover:border-fd-foreground/20 hover:bg-muted/50 transition-colors"
           >
             <div className="flex items-center gap-2">
