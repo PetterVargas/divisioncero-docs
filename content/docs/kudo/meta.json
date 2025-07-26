@@ -6,11 +6,11 @@
   "pages": [
     "---Introducción---",
     "index",
-    "dominios-kudo",
+    "correlacion-kudo-cloud-security-alliance",
     "responsabilidad-compartida",
-    "---Documentos---",
-    "politicas",
     "---Línea Base---",
-    "lineas-base-dominios"
+    "lineas-base-dominios",
+    "---Documentos---",
+    "politicas"
   ]
 }
