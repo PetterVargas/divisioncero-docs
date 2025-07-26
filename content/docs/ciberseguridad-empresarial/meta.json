@@ -4,8 +4,8 @@
     "icon": "Cuboid",
     "root": true,
     "pages": [
-      "---Guide---",
+      "---Guías---",
       "index",
-      "services"
+      "servicios"
     ]
   }

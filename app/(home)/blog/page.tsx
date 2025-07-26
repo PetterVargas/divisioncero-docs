@@ -115,7 +115,7 @@ export default function BlogIndexPage() {
         </div>
         <h1 className="text-4xl font-bold tracking-tight mb-4">Blog</h1>
         <p className="text-lg text-fd-muted-foreground max-w-2xl mx-auto">
-          Artículos y actualizaciones sobre ciberseguridad y tecnologías de vanguardia
+          Artículos y actualizaciones sobre ciberseguridad
         </p>
       </div> 
         

@@ -2,14 +2,15 @@ import '@/app/global.css';
 import { RootProvider } from 'fumadocs-ui/provider';
 import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
+import 'katex/dist/katex.css';
 
 const inter = Inter({
   subsets: ['latin'],
 });
 
 export const metadata = {
-  title: "DivisionCero - Constantly seeking to teach and simplify global cybersecurity",
-  description: "DivisionCero Documentation",
+  title: "DivisionCero - Buscando constantemente enseñar y simplificar la ciberseguridad global",
+  description: "Documentación DivisionCero",
   icons: {
     icon: [
       { url: '/favicon.ico' },

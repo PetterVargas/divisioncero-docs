@@ -1,0 +1,136 @@
+---
+title: Dominios Kudo
+description: Categorias principales para gestionar Ciberseguridad
+icon: Rocket
+---
+
+import { Building2, Shield, Repeat, Server, Users, KeyRound, Activity, DatabaseZap } from 'lucide-react';
+
+<Callout title="Quieres aprender más?">
+  Descarga el [Kit de Ciberseguridad](https://divisioncero.com/home/cybersecurity-kit).
+</Callout>
+
+## 🔒 Dominios
+
+<Cards>
+  <Card icon={<Building2 />} href="/" title="COR - Coherencia Organizacional">
+    Gobierno, estrategia y cumplimiento organizacional.
+  </Card>
+  <Card icon={<Shield />} href="/" title="SAP - Seguridad en Aplicaciones">
+    Protección y gestión segura del ciclo de vida de aplicaciones.
+  </Card>
+  <Card icon={<Repeat />} href="/" title="CCO - Continuidad y Cambios Organizacionales">
+    Resiliencia, continuidad y gestión de cambios.
+  </Card>
+  <Card icon={<Server />} href="/" title="SIF - Seguridad en Infraestructura">
+    Seguridad de redes, servidores y plataformas.
+  </Card>
+  <Card icon={<Users />} href="/" title="THP - Talento Humano y Seguridad en Proveedores">
+    Gestión segura de personas y terceros.
+  </Card>
+  <Card icon={<KeyRound />} href="/" title="SIE - Seguridad en Identidad y Endpoints">
+    Control de acceso e identidad, protección de dispositivos.
+  </Card>
+  <Card icon={<Activity />} href="/" title="ADR - Análisis, Detección y Respuesta de Seguridad">
+    Monitoreo, detección y respuesta ante incidentes.
+  </Card>
+  <Card icon={<DatabaseZap />} href="/" title="DIA - Protección de Datos y Seguridad en Inteligencia Artificial">
+    Seguridad, privacidad de datos e inteligencia artificial.
+  </Card>
+</Cards>
+
+
+## 📝 Correlación Kudo y CSA
+
+Los dominios son los componentes centrales del marco Kudo, correlacionados con los dominios de Cloud Security Alliance.
+
+<Mermaid
+  chart="
+graph LR
+KUDO[Kudo]
+DOM_1[**COR - Coherencia Organizacional**
+*GRC > A&A*]
+DOM_2[**SAP - Seguridad en Aplicaciones**
+*AIS > IPY*]
+DOM_3[**CCO - Continuidad y Cambios Organizacionales**
+*BCR > CCC*]
+DOM_4[**SIF - Seguridad en Infrastructura**
+*DCS > IVS > CEK*]
+DOM_5[**THP - Talento Humano y Seguridad en Proveedores**
+*HRS > STA*]
+DOM_6[**SIE - Seguridad en Identidad y Endpoints**
+*IAM > UEM*]
+DOM_7[**ADR - Análisis, Detección y Respuesta de Seguridad**
+*TVM > LOG > SEF*]
+DOM_8[**DIA - Protección de Datos y Seguridad en Inteligencia Artificial**
+*DSP > MDS*]
+
+DOM1[A&A - Audit and Assurance]
+DOM2[AIS – Application and Interface Security]
+DOM3[BCR – Business Continuity and Operational Resilience]
+DOM4[CCC – Change Control and Configuration Management]
+DOM5[CEK – Cryptography, Encryption, and Key Management]
+DOM6[STA - Supply Chain Mgmt, Transparency & Accountability]
+DOM7[DCS – Datacenter Security]
+DOM8[DSP – Data Security and Privacy Lifecycle Management]
+DOM9[GRC – Governance, Risk, and Compliance]
+DOM10[HRS – Human Resources Security]
+DOM11[IAM – Identity and Access Management]
+DOM12[IPY – Interoperability and Portability]
+DOM13[IVS – Infrastructure and Virtualization Security]
+DOM14[LOG – Logging and Monitoring]
+DOM15[SEF – Security Incident Management, E-Discovery & Forensics]
+DOM16[TVM – Threat and Vulnerability Management]
+DOM17[UEM – Universal Endpoint Management]
+DOM18[MDS – Model Security]
+
+CSA[Cloud Security Alliance]
+
+KUDO --> DOM_1
+KUDO --> DOM_2
+KUDO --> DOM_3
+KUDO --> DOM_4
+KUDO --> DOM_5
+KUDO --> DOM_6
+KUDO --> DOM_7
+KUDO --> DOM_8
+
+DOM_1 --> DOM1
+DOM_1 --> DOM9
+DOM_2 --> DOM2
+DOM_2 --> DOM12
+DOM_3 --> DOM3
+DOM_3 --> DOM4
+DOM_4 --> DOM7
+DOM_4 --> DOM13
+DOM_4 --> DOM5
+DOM_5 --> DOM10
+DOM_5 --> DOM6
+DOM_6 --> DOM11
+DOM_6 --> DOM17
+DOM_7 --> DOM16
+DOM_7 --> DOM14
+DOM_7 --> DOM15
+DOM_8 --> DOM8
+DOM_8 --> DOM18
+
+DOM1 --> CSA
+DOM2 --> CSA
+DOM3 --> CSA
+DOM4 --> CSA
+DOM5 --> CSA
+DOM6 --> CSA
+DOM7 --> CSA
+DOM8 --> CSA
+DOM9 --> CSA
+DOM10 --> CSA
+DOM11 --> CSA
+DOM12 --> CSA
+DOM13 --> CSA
+DOM14 --> CSA
+DOM15 --> CSA
+DOM16 --> CSA
+DOM17 --> CSA
+DOM18 --> CSA"
+/>
+

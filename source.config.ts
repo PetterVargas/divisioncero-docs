@@ -6,6 +6,8 @@ import {
   frontmatterSchema,
 } from 'fumadocs-mdx/config';
 import { z } from 'zod';
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
 
 // You can customise Zod schemas for frontmatter and `meta.json` here
 // see https://fumadocs.vercel.app/docs/mdx/collections#define-docs
@@ -20,7 +22,9 @@ export const docs = defineDocs({
 
 export default defineConfig({
   mdxOptions: {
-    // MDX options
+    remarkPlugins: [remarkMath],
+    // Place it at first, it should be executed before the syntax highlighter
+    rehypePlugins: (v) => [rehypeKatex, ...v],
   },
 });
 
