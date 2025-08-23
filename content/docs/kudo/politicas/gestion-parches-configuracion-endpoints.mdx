@@ -4,7 +4,321 @@ description: Mantenimiento y configuración segura de dispositivos finales.
 ---
 
 <Callout title="Quieres aprender más?">
-  Descarga el [Kit de Ciberseguridad](https://divisioncero.com/home/cybersecurity-kit).
+  Descarga el [Kit de Ciberseguridad](https://divisioncero.com/home/kit-inicio-ciberseguridad).
 </Callout>
+
+## 📋 Información General
+
+**Documento:** Gestión de Parches y Configuración de Endpoints  
+**Versión:** 1.0.0  
+**Fecha:** Enero 2025  
+**Clasificación:** Confidencial  
+**Audiencia:** Administradores de sistemas, DevOps, Equipo de seguridad, CTO, CISO
+
+## 🎯 Propósito
+
+Establecer procesos sistematizados para la gestión proactiva de parches de seguridad, actualizaciones de software y mantenimiento de configuraciones seguras en todos los endpoints de DivisionCero, minimizando la ventana de exposición a vulnerabilidades conocidas, asegurando estabilidad operacional, manteniendo compliance con baselines de seguridad, y reduciendo la superficie de ataque de la organización mediante un enfoque de defense in depth y gestión del riesgo de vulnerabilidades.
+
+## 🏢 Alcance
+
+Esta política aplica a:
+- Workstations y laptops corporativos (Windows, macOS, Linux)
+- Servidores físicos y virtuales de producción y no-producción
+- Dispositivos móviles corporativos y BYOD gestionados
+- Sistemas operativos, aplicaciones, firmware y drivers
+- Infraestructura de virtualización (VMware, Hyper-V, KVM)
+- Sistemas embebidos y dispositivos IoT corporativos
+- Appliances de seguridad y networking
+- Contenedores y plataformas de orquestación
+
+## 📚 Definiciones
+
+- **Patch Management:** Proceso de adquisición, testing, e instalación de actualizaciones de software
+- **Vulnerability Window:** Tiempo entre descubrimiento público de vulnerabilidad e instalación de parche
+- **Configuration Baseline:** Conjunto estándar de configuraciones de seguridad para sistemas
+- **Configuration Drift:** Desviación de configuraciones del baseline establecido
+- **Zero-Day:** Vulnerabilidad sin parche disponible públicamente
+- **Rollback Plan:** Procedimiento para revertir cambios en caso de fallas post-instalación
+- **Staged Deployment:** Implementación gradual en fases para minimizar riesgo operacional
+
+## 🛡️ Política
+
+### Gestión de Vulnerabilidades y Parches
+
+#### Proceso de Gestión de Vulnerabilidades
+
+**1. Discovery y Assessment**
+- Escaneo automatizado continuo de vulnerabilidades en todos los endpoints
+- Integración con múltiples fuentes: Nessus, Qualys, Microsoft WSUS, Red Hat Satellite
+- Correlación con threat intelligence feeds para priorización de riesgo
+- Identificación de activos críticos y dependencias de sistemas
+- Assessment de exploitabilidad y impacto potencial de vulnerabilidades
+- Catalogación en vulnerability management database con scoring CVSS 3.1
+
+**2. Clasificación y Priorización**
+- **Crítico:** CVSS 9.0-10.0, exploits públicos disponibles, sistemas críticos expuestos
+- **Alto:** CVSS 7.0-8.9, vulnerabilidades remotas, sistemas de producción
+- **Medio:** CVSS 4.0-6.9, vulnerabilidades locales, sistemas no críticos
+- **Bajo:** CVSS 0.1-3.9, requiere acceso físico, sistemas de desarrollo/testing
+- Consideración de factores organizacionales: exposición, criticidad de activos, threat landscape
+- Priorización adicional basada en intelligence de amenazas activas
+
+**3. Timeframes de Remediación (SLAs)**
+- **Crítico:** 72 horas desde disponibilidad de parche
+- **Alto:** 7 días calendario
+- **Medio:** 30 días calendario
+- **Bajo:** 90 días calendario o próxima ventana de mantenimiento programada
+- **Zero-day con exploit activo:** 24 horas (medidas compensatorias si no hay parche)
+
+#### Proceso de Patch Management
+
+**4. Adquisición y Catalogación**
+- Suscripción a feeds de seguridad de vendors (Microsoft, Adobe, Oracle, etc.)
+- Monitoreo de CVE databases y advisories de seguridad
+- Catalogación automática en patch management system (WSUS/SCCM/Red Hat Satellite)
+- Validación de autenticidad y integridad de parches mediante checksums
+- Documentación de cambios incluidos y sistemas afectados
+- Análisis de dependencias y requisitos previos para instalación
+
+**5. Testing y Validación**
+- **Entorno de Lab:** Testing inicial en sistemas aislados replicando producción
+- **Functional Testing:** Validación de aplicaciones críticas post-instalación
+- **Performance Testing:** Verificación de impacto en rendimiento de sistemas
+- **Compatibility Testing:** Validación de compatibilidad con software existente
+- **Rollback Testing:** Verificación de procedimientos de rollback funcionan correctamente
+- **Documentación:** Creación de runbooks detallados para deployment
+
+**6. Deployment Estratégico**
+- **Fase 1 (Pilot):** 5% de sistemas, enfoque en test systems y usuarios early adopters
+- **Fase 2 (Limited):** 25% de sistemas, inclusión de algunos sistemas de producción
+- **Fase 3 (Broad):** 75% de sistemas, mayoría de infraestructura de producción
+- **Fase 4 (Complete):** 100% de sistemas aplicables
+- Pausas programadas entre fases para monitoring y validación
+- Go/No-go gates basados en métricas de éxito predefinidas
+
+### Configuration Management
+
+#### Baseline Configuration Standards
+
+**7. Configuration Baselines**
+- Desarrollo de gold standards basados en CIS Benchmarks, DISA STIGs, NIST guidelines
+- Templates específicos por tipo de sistema y función organizacional
+- **Workstations:** Standard user workstation, developer workstation, executive systems
+- **Servers:** Web servers, database servers, application servers, domain controllers
+- Versioning de baselines con change control formal
+- Automated compliance checking mediante configuration scanning herramientas
+
+**8. Configuration Control Board (CCB)**
+- Comité multidisciplinario para aprobar cambios a baselines estándar
+- Composición: Seguridad, Operaciones, Arquitectura, Compliance, Representative users
+- Reuniones quincenales para review de change requests
+- Proceso formal de RFC (Request for Change) con análisis de impacto
+- Documentación de rationale para excepciones aprobadas
+- Tracking de implementation status y effectiveness de cambios
+
+**9. Automated Configuration Enforcement**
+- Implementación de infrastructure as code (Ansible, Puppet, Chef)
+- Group Policy Objects (GPOs) para enforcement en entornos Windows
+- Configuration profiles para dispositivos macOS e iOS
+- Continuous compliance monitoring con remediation automática
+- Alerting para configuration drift detection
+- Self-healing capabilities para configuraciones críticas de seguridad
+
+#### Configuration Drift Management
+
+**10. Drift Detection**
+- Scans programados para detectar deviaciones de baseline configurations
+- Real-time monitoring para cambios críticos de configuración
+- Machine learning para identification de patterns anómalos
+- Integration con SIEM para correlation con security events
+- Risk scoring de configuration changes basado en security impact
+- Automated ticketing para configuration remediation
+
+**11. Remediation Processes**
+- **Automated Remediation:** Para cambios de bajo riesgo y configuraciones estándar
+- **Semi-automated:** Requiere aprobación humana antes de remediation
+- **Manual:** Para cambios complejos o de alto impacto
+- Emergency remediation procedures para security-critical configurations
+- Documentation de all configuration changes para audit trail
+- Post-remediation validation para ensure proper restoration
+
+### Endpoint Configuration Hardening
+
+#### Security Configuration Standards
+
+**12. Operating System Hardening**
+- **Windows:** Implementation de Microsoft Security Compliance Toolkit
+- **Linux:** Application de CIS Benchmarks específicos por distribución
+- **macOS:** Configuration según macOS Security Compliance Project
+- Removal de unnecessary services, protocols, y software components
+- Account policies: password complexity, lockout policies, privilege restrictions
+- Audit policies: comprehensive logging de security-relevant events
+
+**13. Application Security Configuration**
+- **Web Browsers:** Security-focused configuration con controlled extensions
+- **Office Suites:** Macro security, protected view, encryption settings
+- **PDF Readers:** JavaScript disabled, automatic updates, sandboxing enabled
+- **Messaging Apps:** End-to-end encryption, file sharing restrictions
+- Application allow listing y control de execution rights
+- Regular updates to application security configurations
+
+**14. Network Security Configuration**
+- **Firewalls:** Host-based firewalls con default-deny policies
+- **VPN Clients:** Strong authentication, kill switches, DNS leak protection
+- **WiFi:** WPA3 configuration, certificate-based authentication
+- **Bluetooth:** Disabled by default, restricted pairing policies
+- Network location awareness y conditional access policies
+- Monitoring de network configuration changes
+
+### Specialized Endpoint Management
+
+#### Mobile Device Configuration
+
+**15. Mobile Device Management (MDM)**
+- Comprehensive MDM policies para corporate y BYOD devices
+- Configuration profiles para security settings enforcement
+- Application management con corporate app catalog
+- Conditional access basado en device compliance status
+- Remote wipe capabilities con selective corporate data removal
+- Continuous compliance monitoring con automated remediation
+
+**16. BYOD Configuration Requirements**
+- Minimum OS versions y security patch levels
+- Required security applications (VPN, antivirus, MDM agent)
+- Prohibited applications y usage restrictions
+- Data containerization y corporate/personal separation
+- Network access restrictions y VPN requirements
+- Privacy considerations y user consent management
+
+#### Server and Infrastructure Configuration
+
+**17. Server Hardening Standards**
+- **Windows Servers:** DISA STIG compliance y CIS Benchmark implementation
+- **Linux Servers:** Distribution-specific hardening guides
+- **Virtualization Platforms:** VMware, Hyper-V security configurations
+- Database hardening según vendor best practices
+- Web server security configuration (Apache, NGINX, IIS)
+- Container security configuration y image scanning
+
+**18. Infrastructure Security Configuration**
+- **Network Devices:** Router, switch, firewall configuration standards
+- **Storage Systems:** Encryption at rest, access control, audit logging
+- **Backup Systems:** Secure configuration, encryption, access controls
+- **Monitoring herramientas:** SIEM, log management, network monitoring configuration
+- **Security Appliances:** IPS, DLP, email security configuration
+- Regular configuration backups y disaster recovery testing
+
+### Change Management Integration
+
+#### Change Control Process
+
+**19. Formal Change Management**
+- Integration con ITIL change management processes
+- Risk assessment para all configuration changes
+- Approval workflows basados en risk level y system criticality
+- Scheduled change windows para minimize business impact
+- Emergency change procedures para security-critical updates
+- Post-implementation review y lessons learned documentation
+
+**20. Documentation y Audit Trail**
+- Comprehensive documentation de all configuration changes
+- Automated logging de configuration management activities
+- Regular audit de configuration management processes
+- Compliance reporting para internal y external auditors
+- Evidence collection para regulatory compliance requirements
+- Retention policies para configuration management records
+
+### Monitoring y Compliance
+
+#### Continuous Monitoring
+
+**21. Configuration Compliance Monitoring**
+- 24/7 monitoring de configuration compliance status
+- Real-time alerting para critical configuration deviations
+- Dashboard visibility para executive y operational teams
+- Trending analysis para identify systemic issues
+- Integration con risk management processes
+- Automated reporting para compliance stakeholders
+
+**22. Vulnerability Management Integration**
+- Correlation entre configuration weaknesses y known vulnerabilities
+- Prioritization de configuration fixes basado en threat intelligence
+- Integration con vulnerability scanning herramientas
+- Risk scoring que combines configuration y vulnerability data
+- Automated remediation workflows para common misconfigurations
+- Regular assessment de configuration management effectiveness
+
+## 👥 Roles y Responsabilidades
+
+- **Patch Management Team:** Execute patch testing, deployment, y tracking de compliance
+- **Configuration Management Team:** Maintain baselines, monitor drift, automate remediation
+- **System Administrators:** Implement changes, maintain system health, support users
+- **Security Team:** Define security requirements, assess risks, monitor compliance
+- **Change Control Board:** Approve configuration changes, assess impacts, manage risks
+- **IT Operations:** Coordinate deployments, manage change windows, monitor system performance
+- **Compliance Team:** Validate adherence to standards, manage audit processes
+
+## 📊 Cumplimiento y Medición
+
+**KPIs Operacionales:**
+- Patch compliance rate por criticality level (Crítico: >95%, Alto: >90%, Medio: >85%)
+- Mean time to patch (MTTP) desde release hasta deployment completo
+- Configuration compliance rate vs. established baselines (>95%)
+- Change success rate sin rollback requirement (>98%)
+
+**Métricas de Seguridad:**
+- Number de vulnerabilities remediated dentro de SLA timeframes
+- Reduction en attack surface through configuration hardening
+- Security incident rate relacionados con missing patches o misconfigurations
+- Time to remediation para configuration drift detection
+
+**Indicadores de Riesgo:**
+- Systems con critical vulnerabilities >72 horas old
+- Configuration drift items sin remediation >7 días
+- Failed patch deployments requiring emergency rollback
+- Systems unable to receive patches debido a end-of-life status
+
+**Métricas de Eficiencia:**
+- Automation rate de patch deployment process
+- Reduction en manual effort through configuration automation
+- Cost per endpoint para patch management activities
+- User downtime durante patch deployment windows
+
+## 🚨 Incumplimiento
+
+**Riesgos del Incumplimiento:**
+- Increased vulnerability to cyber attacks y data breaches
+- Regulatory compliance violations y potential fines
+- System instability y operational disruptions
+- Loss de customer trust y reputational damage
+
+**Violaciones Críticas:**
+- Failure to patch critical vulnerabilities within 72-hour SLA
+- Unauthorized configuration changes bypassing change control
+- Disabling de security controls through configuration modifications
+- Exposure de production systems sin proper hardening
+
+**Consecuencias:**
+- Immediate escalation a CISO y executive leadership
+- Mandatory remediation con defined timelines
+- Additional monitoring y oversight para affected systems
+- Potential disciplinary action para responsible personnel
+- Enhanced training requirements para involved teams
+- Review y strengthening de processes para prevent recurrence
+
+## 📖 Referencias
+
+- ISO 27001:2022 - A.12.6 Management of technical vulnerabilities
+- NIST SP 800-53 - SI-2 Flaw Remediation, CM-6 Configuration Settings
+- CIS Controls v8 - Control 7: Continuous Vulnerability Management
+- NIST SP 800-40 - Guide to Enterprise Patch Management Technologies
+- SANS Critical Security Controls - Secure Configuration Management
+- CVE/CVSS Standards para vulnerability scoring y classification
+
+## 📝 Control de Versiones
+
+| Versión | Fecha | Cambios | Autor |
+|---------|-------|---------|-------|
+| 1.0.0 | Enero 2025 | Versión inicial | Equipo GRC |
 
 

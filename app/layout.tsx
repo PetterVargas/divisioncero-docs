@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "DivisionCero - Buscando constantemente enseñar y simplificar la ciberseguridad global",
+  title: "DivisionCero - Buscando constantemente enseñar y simplificar la ciberseguridad de LatAm",
   description: "Documentación DivisionCero",
   icons: {
     icon: [
