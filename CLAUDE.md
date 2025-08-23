@@ -26,8 +26,8 @@ divisioncero-docs/
 │   │   ├── cyberacademy/         # Módulos de formación
 │   │   ├── ciberseguridad-empresarial/ # Servicios empresariales
 │   │   └── kudo/                 # Libro abierto de ciberseguridad
+│   │       └── dominios/    # Baselines por dominios de seguridad
 │   │       ├── politicas/        # Templates de políticas (85+ documentos)
-│   │       └── lineas-base-dominios/ # Baselines por dominios de seguridad
 ├── lib/                          # Utilities y configuración
 └── source.config.ts             # Configuración de Fumadocs
 ```
