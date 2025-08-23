@@ -31,11 +31,11 @@ La Ciberseguridad no se trata solo de defensa o ataque — se trata de respeto m
 ## 📋 Secciones
 
 <Cards>
+  <Card icon={<Shield />} href="/docs/kudo/dominios" title="Dominios Kudo">
+    Conoce la foto inicial y prinicipal.
+  </Card>
   <Card icon={<FileText />} href="/docs/kudo/politicas" title="Políticas Templates">
     Información base para iniciar.
-  </Card>
-  <Card icon={<Shield />} href="/docs/kudo/baseline" title="Baseline por Dominios">
-    Conoce la foto inicial y prinicipal.
   </Card>
 </Cards>
 
@@ -72,19 +72,19 @@ CEO --> CISO[Chief Information Security Officer]
 CEO --> CLO[Chief Legal Officer]
 
 CTO --> SWD[Software Development]
-CTO --> OPS[Operations]
+CTO --> OPS[Operaciones]
 
-CISO --> SOC[SOC Team]
-CISO --> ISEC[Infrastructure Security Team]
-CISO --> GRCT[GRC Team]
+CISO --> SOC[Team SOC]
+CISO --> ISEC[Equipo de Seguridad Infrastructura]
+CISO --> GRCT[Team GRC]
 
 COO --> PROC[Procurement]
-COO --> HR[Human Resources]
+COO --> TH[Talento Humano]
 
 CLO --> LEG[Legal]
 CLO --> PRIV[Privacy Office]
 
-CFO --> FIN[Finance]
+CFO --> FIN[Finanzas]
 CFO --> IA[Internal Audit]"
 />
 
@@ -101,22 +101,21 @@ CFO --> IA[Internal Audit]"
 ### Roles y Responsabilidades
 
 - [X] **CEO (Chief Executive Officer):** Responsable final de la postura de seguridad organizacional y la estrategia de gestión de riesgos.
-- [X] **CISO (Chief Information Security Officer):** Patrocinador principal del marco de políticas de seguridad de la información y la estructura de gobernanza.
-- [X] **SOC Team (Security Operations Center):** Monitorea amenazas en tiempo real, detecta incidentes de seguridad, coordina la respuesta inicial y mantiene la vigilancia continua del entorno tecnológico.
-- [X] **Infrastructure Security Team:** Implementa y mantiene controles de seguridad técnicos, gestiona configuraciones seguras, realiza evaluaciones de vulnerabilidades y asegura el hardening de sistemas.
-- [X] **GRC Team (Governance, Risk & Compliance):** Curadores de la arquitectura documental y responsables del ciclo de vida de las políticas.
 - [X] **CTO (Chief Technology Officer) & Technology Teams:** Aseguran la implementación segura de sistemas e infraestructura siguiendo las políticas definidas.
-- [X] **Internal Audit:** Proporciona verificación independiente del cumplimiento de políticas y efectividad de controles.
-- [X] **Legal & Privacy Office:** Asegura alineación con requisitos regulatorios, obligaciones de protección de datos y proporciona orientación legal sobre políticas de seguridad, gestionando asuntos legales relacionados con la seguridad.
 - [X] **COO (Chief Operations Officer):** Supervisa las operaciones diarias asegurando que los procedimientos de seguridad estén integrados en los procesos de negocio.
 - [X] **CFO (Chief Financial Officer):** Asegura recursos financieros apropiados para iniciativas de seguridad y evalúa inversiones en seguridad.
+- [X] **CISO (Chief Information Security Officer):** Patrocinador principal del marco de políticas de seguridad de la información y la estructura de gobernanza.
+- [X] **Equipo SOC (Security Operations Center):** Monitorea amenazas en tiempo real, detecta incidentes de seguridad, coordina la respuesta inicial y mantiene la vigilancia continua del entorno tecnológico.
+- [X] **Equipo de Seguridad Infrastructura:** Implementa y mantiene controles de seguridad técnicos, gestiona configuraciones seguras, realiza evaluaciones de vulnerabilidades y asegura el hardening de sistemas.
+- [X] **Equipo GRC (Governance, Risk & Compliance):** Curadores de la arquitectura documental y responsables del ciclo de vida de las políticas.
+- [X] **Legal & Privacy Office:** Asegura alineación con requisitos regulatorios, obligaciones de protección de datos y proporciona orientación legal sobre políticas de seguridad, gestionando asuntos legales relacionados con la seguridad.
 - [X] **Software Development:** Implementa prácticas de desarrollo seguro y atiende los requisitos de seguridad en productos de software.
-- [X] **Operations:** Mantiene configuraciones seguras de infraestructura y controles de seguridad operativa.
+- [X] **Operaciones:** Mantiene configuraciones seguras de infraestructura y controles de seguridad operativa.
 - [X] **Procurement:** Evalúa prácticas de seguridad de proveedores e incorpora requisitos de seguridad en los contratos.
-- [X] **Human Resources:** Gestiona capacitación en seguridad, verificaciones de antecedentes y aspectos de seguridad en procesos de personal.
-- [X] **Finance:** Gestiona los aspectos financieros del programa de seguridad y los gastos relacionados.
-- [X] **Internal Audit:** Realiza evaluaciones independientes de controles de seguridad y proporciona aseguramiento de efectividad.
-- [X] **All Teams:** Responsable de entender y cumplir con las políticas y procedimientos establecidos.
+- [X] **Recursos Humanos:** Gestiona capacitación en seguridad, verificaciones de antecedentes y aspectos de seguridad en procesos de personal.
+- [X] **Finanzas:** Gestiona los aspectos financieros del programa de seguridad y los gastos relacionados.
+- [X] **Auditoría Interna:** Realiza evaluaciones independientes de controles de seguridad y proporciona aseguramiento de efectividad.
+- [X] **Todos los equipos:** Responsables de entender y cumplir con las políticas y procedimientos establecidos.
 
 ## 🔄 Ciclo de vida de los documentos
 
@@ -134,13 +133,12 @@ F --> A"
 ## 📂 Estructura de Documentos
 
 <Files>
-  <Folder name="Cumplimiento Ciberseguridad" defaultOpen>
-    <Folder name="Políticas"></Folder>
-    <Folder name="Mejores prácticas" defaultOpen>
-        <File name="Baseline" />
-        <File name="Herramientas" />
-        <File name="Cursos" />
+  <Folder name="Framework de Ciberseguridad Kudo" defaultOpen>
+    <Folder name="Dominios" defaultOpen>
+      <File name="Línea Base | Herramientas | Cursos" />
+      <Folder name="Controles Kudo"></Folder>
     </Folder>
+    <Folder name="Políticas templates"></Folder>
   </Folder>
 </Files>
 
