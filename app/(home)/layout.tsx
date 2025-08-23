@@ -72,7 +72,7 @@ function Footer() {
               <h3 className="font-medium mb-4">About</h3>
               <ul className="space-y-2">
                 <li><a href="/docs/kudo" className="text-sm hover:underline">Kudo</a></li>
-                <li><a href="https://divisioncero.com/tools" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Tools</a></li>
+                <li><a href="https://divisioncero.com/herramientas" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
                 <li><a href="/blog" className="text-sm hover:underline">Blog</a></li>
               </ul>
             </div>
@@ -81,7 +81,7 @@ function Footer() {
             <div className="flex flex-col gap-y-2.5">
               <h3 className="font-medium mb-4">Product</h3>
               <ul className="space-y-2">
-                <li><a href="https://divisioncero.com/courses" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
+                <li><a href="https://divisioncero.com/cursos" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
                 <li><a href="https://divisioncero.com/ciberseguridad-empresarial" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Cibersecurity Empresarial</a></li>
                 <li><a href="/" className="text-sm hover:underline">Documentación</a></li>
               </ul>

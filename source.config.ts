@@ -1,40 +1,40 @@
-import {
-  defineConfig,
-  defineDocs,
-  metaSchema,
-  defineCollections,
-  frontmatterSchema,
-} from 'fumadocs-mdx/config';
-import { z } from 'zod';
-import rehypeKatex from 'rehype-katex';
-import remarkMath from 'remark-math';
+import {   
+  defineConfig,   
+  defineDocs,   
+  metaSchema,   
+  defineCollections,   
+  frontmatterSchema, 
+} from 'fumadocs-mdx/config'; 
 
-// You can customise Zod schemas for frontmatter and `meta.json` here
-// see https://fumadocs.vercel.app/docs/mdx/collections#define-docs
-export const docs = defineDocs({
-  docs: {
-    schema: frontmatterSchema,
-  },
-  meta: {
-    schema: metaSchema,
-  },
+import { z } from 'zod'; 
+import rehypeKatex from 'rehype-katex'; 
+import remarkMath from 'remark-math';  
+
+// Definición de docs y metadatos
+export const docs = defineDocs({   
+  docs: {     
+    schema: frontmatterSchema,   
+  },   
+  meta: {     
+    schema: metaSchema,   
+  },   
+});  
+
+// Configuración principal
+export default defineConfig({   
+  lastModifiedTime: 'git', // 👈 añade la última modificación desde Git
+  mdxOptions: {     
+    remarkPlugins: [remarkMath],     
+    rehypePlugins: (v) => [rehypeKatex, ...v],   
+  }, 
+});  
+
+// Definición de colección de blog
+export const blogPosts = defineCollections({   
+  type: 'doc',   
+  dir: 'content/blog',   
+  schema: frontmatterSchema.extend({     
+    author: z.string(),     
+    date: z.string().date().or(z.date()),   
+  }), 
 });
-
-export default defineConfig({
-  mdxOptions: {
-    remarkPlugins: [remarkMath],
-    // Place it at first, it should be executed before the syntax highlighter
-    rehypePlugins: (v) => [rehypeKatex, ...v],
-  },
-});
-
-export const blogPosts = defineCollections({
-  type: 'doc',
-  dir: 'content/blog',
-  // add required frontmatter properties
-  schema: frontmatterSchema.extend({
-    author: z.string(),
-    date: z.string().date().or(z.date()),
-  }),
-});
-

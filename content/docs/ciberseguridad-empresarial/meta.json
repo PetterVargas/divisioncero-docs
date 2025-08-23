@@ -1,7 +1,7 @@
 {
-    "title": "Ciberseguridad empresarial",
+    "title": "Ciberseguridad Empresarial",
     "description": "Automatización en Ciberseguridad",
-    "icon": "Cuboid",
+    "icon": "Settings",
     "root": true,
     "pages": [
       "---Guías---",
