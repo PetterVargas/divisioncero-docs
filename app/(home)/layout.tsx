@@ -53,7 +53,7 @@ function Footer() {
               <a href="https://tiktok.com/@divisioncero" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
                 <Video size={20} className="text-fd-secondary-foreground hover:text-primary" />
               </a>
-              <a href="https://divisioncero.com" aria-label="Website" target="_blank" rel="noopener noreferrer">
+              <a href="https://divisioncero.com?utm_source=docs.divisioncero.com/docs/kudo" aria-label="Website" target="_blank" rel="noopener noreferrer">
                 <Globe size={20} className="text-fd-secondary-foreground hover:text-primary" />
               </a>
               <a href="https://petervargas.com" aria-label="Author's Website - Peter Vargas" target="_blank" rel="noopener noreferrer">
@@ -72,7 +72,7 @@ function Footer() {
               <h3 className="font-medium mb-4">About</h3>
               <ul className="space-y-2">
                 <li><a href="/docs/kudo" className="text-sm hover:underline">Kudo</a></li>
-                <li><a href="https://divisioncero.com/herramientas" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
+                <li><a href="https://divisioncero.com/herramientas?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
                 <li><a href="/blog" className="text-sm hover:underline">Blog</a></li>
               </ul>
             </div>
@@ -81,8 +81,8 @@ function Footer() {
             <div className="flex flex-col gap-y-2.5">
               <h3 className="font-medium mb-4">Product</h3>
               <ul className="space-y-2">
-                <li><a href="https://divisioncero.com/cursos" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
-                <li><a href="https://divisioncero.com/ciberseguridad-empresarial" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Cibersecurity Empresarial</a></li>
+                <li><a href="https://divisioncero.com/cursos?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
+                <li><a href="https://divisioncero.com/ciberseguridad-empresarial?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Cibersecurity Empresarial</a></li>
                 <li><a href="/" className="text-sm hover:underline">Documentación</a></li>
               </ul>
             </div>
@@ -91,9 +91,9 @@ function Footer() {
             <div className="flex flex-col gap-y-2.5">
               <h3 className="font-medium mb-4">Legal</h3>
               <ul className="space-y-2">
-                <li><a href="https://divisioncero.com/terms-of-service" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
-                <li><a href="https://divisioncero.com/privacy-policy" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
-                <li><a href="https://divisioncero.com/cookie-policy" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
+                <li><a href="https://divisioncero.com/terms-of-service?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
+                <li><a href="https://divisioncero.com/privacy-policy?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+                <li><a href="https://divisioncero.com/cookie-policy?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
               </ul>
             </div>
           </div>
