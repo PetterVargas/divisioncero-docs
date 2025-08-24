@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       links={[
         {
           type: 'icon',
-          url: 'https://github.com/PetterVargas/divisioncero-docs',
+          url: 'https://github.com/PetterVargas/divisioncero-docs?utm_source=docs.divisioncero.com/docs/kudo',
           text: 'Github',
           icon: (
             <svg role="img" viewBox="0 0 24 24" fill="currentColor">
@@ -24,13 +24,13 @@ export default function Layout({ children }: { children: ReactNode }) {
         {
           icon: <LogInIcon />,
           text: 'Login',
-          url: 'http://divisioncero.com/auth/sign-in',
+          url: 'http://divisioncero.com/auth/sign-in?utm_source=docs.divisioncero.com/docs/kudo',
           secondary: true,
         },
         {
           icon: <UserIcon />,
           text: 'Regístrate',
-          url: 'http://divisioncero.com/auth/sign-up',
+          url: 'http://divisioncero.com/auth/sign-up?utm_source=docs.divisioncero.com/docs/kudo',
           secondary: true,
         },
       ]}
@@ -49,31 +49,31 @@ export default function Layout({ children }: { children: ReactNode }) {
               </p>
               {/* Social Media Icons */}
               <div className="mt-8 flex flex-wrap gap-4">
-                <a href="https://linkedin.com/company/divisioncero" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/company/divisioncero?utm_source=docs.divisioncero.com/docs/kudo" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                   <Linkedin size={20} className="text-fd-secondary-foreground hover:text-primary" />
                 </a>
-                <a href="https://x.com/divisioncero" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/divisioncero?utm_source=docs.divisioncero.com/docs/kudo" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
                   <Twitter size={20} className="text-fd-secondary-foreground hover:text-primary" />
                 </a>
-                <a href="https://facebook.com/divisioncerocom" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <a href="https://facebook.com/divisioncerocom?utm_source=docs.divisioncero.com/docs/kudo" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <Facebook size={20} className="text-fd-secondary-foreground hover:text-primary" />
                 </a>
-                <a href="https://github.com/PetterVargas" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/PetterVargas?utm_source=docs.divisioncero.com/docs/kudo" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <Github size={20} className="text-fd-secondary-foreground hover:text-primary" />
                 </a>
-                <a href="https://instagram.com/divisioncero" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <a href="https://instagram.com/divisioncero?utm_source=docs.divisioncero.com/docs/kudo" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                   <Instagram size={20} className="text-fd-secondary-foreground hover:text-primary" />
                 </a>
-                <a href="https://youtube.com/@divisioncero" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                <a href="https://youtube.com/@divisioncero?utm_source=docs.divisioncero.com/docs/kudo" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
                   <Youtube size={20} className="text-fd-secondary-foreground hover:text-primary" />
                 </a>
-                <a href="https://tiktok.com/@divisioncero" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                <a href="https://tiktok.com/@divisioncero?utm_source=docs.divisioncero.com/docs/kudo" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
                   <Video size={20} className="text-fd-secondary-foreground hover:text-primary" />
                 </a>
-                <a href="https://divisioncero.com" aria-label="Website" target="_blank" rel="noopener noreferrer">
+                <a href="https://divisioncero.com?utm_source=docs.divisioncero.com/docs/kudo" aria-label="Website" target="_blank" rel="noopener noreferrer">
                   <Globe size={20} className="text-fd-secondary-foreground hover:text-primary" />
                 </a>
-                <a href="https://petervargas.com" aria-label="Author's Website - Peter Vargas" target="_blank" rel="noopener noreferrer">
+                <a href="https://petervargas.com?utm_source=docs.divisioncero.com/docs/kudo" aria-label="Author's Website - Peter Vargas" target="_blank" rel="noopener noreferrer">
                   <User size={20} className="text-fd-secondary-foreground hover:text-primary" />
                 </a>
               </div>
@@ -89,7 +89,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                 <h3 className="font-medium mb-4">About</h3>
                 <ul className="space-y-2">
                   <li><a href="/docs/kudo" className="text-sm hover:underline">Kudo</a></li>
-                  <li><a href="https://divisioncero.com/herramientas" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
+                  <li><a href="https://divisioncero.com/herramientas?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
                   <li><a href="/blog" className="text-sm hover:underline">Blog</a></li>
                 </ul>
               </div>
@@ -98,8 +98,8 @@ export default function Layout({ children }: { children: ReactNode }) {
               <div className="flex flex-col gap-y-2.5">
                 <h3 className="font-medium mb-4">Product</h3>
                 <ul className="space-y-2">
-                  <li><a href="https://divisioncero.com/cursos" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
-                  <li><a href="https://divisioncero.com/ciberseguridad-empresarial" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Cibersecurity Empresarial</a></li>
+                  <li><a href="https://divisioncero.com/cursos?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
+                  <li><a href="https://divisioncero.com/ciberseguridad-empresarial?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Cibersecurity Empresarial</a></li>
                   <li><a href="/" className="text-sm hover:underline">Documentación</a></li>
                 </ul>
               </div>
@@ -108,9 +108,9 @@ export default function Layout({ children }: { children: ReactNode }) {
               <div className="flex flex-col gap-y-2.5">
                 <h3 className="font-medium mb-4">Legal</h3>
                 <ul className="space-y-2">
-                  <li><a href="https://divisioncero.com/terms-of-service" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
-                  <li><a href="https://divisioncero.com/privacy-policy" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
-                  <li><a href="https://divisioncero.com/cookie-policy" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
+                  <li><a href="https://divisioncero.com/terms-of-service?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
+                  <li><a href="https://divisioncero.com/privacy-policy?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+                  <li><a href="https://divisioncero.com/cookie-policy?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
                 </ul>
               </div>
             </div>

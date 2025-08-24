@@ -53,7 +53,7 @@ export const baseOptions: BaseLayoutProps = {
     {
       icon: <GraduationCapIcon />,
       text: 'Cursos',
-      url: 'https://divisioncero.com/cursos',
+      url: 'https://divisioncero.com/cursos?utm_source=docs.divisioncero.com/docs/kudo',
       secondary: false,
     },
     {
@@ -76,19 +76,19 @@ export const baseOptions: BaseLayoutProps = {
           icon: <FileTextIcon />,
           text: 'Open Sources',
           description: 'Proyectos y contribuciones abiertos',
-          url: 'https://divisioncero.com/opensource',
+          url: 'https://divisioncero.com/opensource?utm_source=docs.divisioncero.com/docs/kudo',
         },
         {
           icon: <WrenchIcon />,
           text: 'Herramientas',
           description: 'Ayuda en Ciberseguridad',
-          url: 'https://divisioncero.com/herramientas',
+          url: 'https://divisioncero.com/herramientas?utm_source=docs.divisioncero.com/docs/kudo',
         },
         {
           icon: <BookIcon />,
           text: 'Releases',
           description: 'Actualizaciones sobre la plataforma',
-          url: 'https://divisioncero.com/releases',
+          url: 'https://divisioncero.com/releases?utm_source=docs.divisioncero.com/docs/kudo',
         },
       ],
     },
@@ -106,13 +106,13 @@ export const baseOptions: BaseLayoutProps = {
     {
       icon: <LogInIcon />,
       text: <span className="block md:inline">Login</span>,
-      url: 'http://divisioncero.com/auth/sign-in',
+      url: 'http://divisioncero.com/auth/sign-in?utm_source=docs.divisioncero.com/docs/kudo',
       secondary: true,
     },
     {
       icon: <UserIcon />,
       text: <span className="bg-fd-primary hover:bg-fd-primary/90 dark:bg-fd-primary/80 dark:hover:bg-fd-primary text-white dark:text-white rounded-md px-3 py-1 font-bold block md:inline-block">Regístrate</span>,
-      url: 'http://divisioncero.com/auth/sign-up',
+      url: 'http://divisioncero.com/auth/sign-up?utm_source=docs.divisioncero.com/docs/kudo',
       secondary: true,
     },
   ],
