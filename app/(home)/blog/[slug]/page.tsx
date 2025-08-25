@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { InlineTOC } from 'fumadocs-ui/components/inline-toc';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { blog } from '@/lib/source';
-import { LLMCopyButton, ViewOptions } from '@/components/page-actions';
+import { ViewOptions } from '@/components/page-actions';
 
 const owner = 'PetterVargas';
 const repo = 'divisioncero-docs';
@@ -22,9 +22,8 @@ export default async function Page(props: {
         <h1 className="mb-2 text-center text-3xl font-bold">{page.data.title}</h1>
         <p className="mb-2 text-center text-fd-muted-foreground">{page.data.description}</p>
         <div className="flex flex-row gap-2 items-center border-b mb-6 pb-4">
-          <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
           <ViewOptions
-            markdownUrl={`${page.url}.mdx`}
+            markdownUrl={`/api/mdx${page.url}`}
             githubUrl={`https://github.com/${owner}/${repo}/blob/main/content/blog/${page.path}`}
           />
         </div>
