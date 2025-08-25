@@ -1,14 +1,11 @@
 'use client';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import {
-  Check,
   ChevronDown,
-  Copy,
   ExternalLinkIcon,
   MessageCircleIcon,
 } from 'lucide-react';
 import { cn } from '../lib/cn';
-import { useCopyButton } from 'fumadocs-ui/utils/use-copy-button';
 import { buttonVariants } from './ui/button';
 import {
   Popover,
@@ -16,57 +13,6 @@ import {
   PopoverTrigger,
 } from 'fumadocs-ui/components/ui/popover';
 import { cva } from 'class-variance-authority';
-
-const cache = new Map<string, string>();
-
-export function LLMCopyButton({
-  /**
-   * A URL to fetch the raw Markdown/MDX content of page
-   */
-  markdownUrl,
-}: {
-  markdownUrl: string;
-}) {
-  const [isLoading, setLoading] = useState(false);
-  const [checked, onClick] = useCopyButton(async () => {
-    const cached = cache.get(markdownUrl);
-    if (cached) return navigator.clipboard.writeText(cached);
-
-    setLoading(true);
-
-    try {
-      await navigator.clipboard.write([
-        new ClipboardItem({
-          'text/plain': fetch(markdownUrl).then(async (res) => {
-            const content = await res.text();
-            cache.set(markdownUrl, content);
-
-            return content;
-          }),
-        }),
-      ]);
-    } finally {
-      setLoading(false);
-    }
-  });
-
-  return (
-    <button
-      disabled={isLoading}
-      className={cn(
-        buttonVariants({
-          color: 'secondary',
-          size: 'sm',
-          className: 'gap-2 [&_svg]:size-3.5 [&_svg]:text-fd-muted-foreground',
-        }),
-      )}
-      onClick={onClick}
-    >
-      {checked ? <Check /> : <Copy />}
-      Copiar Markdown
-    </button>
-  );
-}
 
 const optionVariants = cva(
   'text-sm p-2 rounded-lg inline-flex items-center gap-2 hover:text-fd-accent-foreground hover:bg-fd-accent [&_svg]:size-4',
@@ -91,7 +37,7 @@ export function ViewOptions({
       typeof window !== 'undefined'
         ? new URL(markdownUrl, window.location.origin)
         : 'loading';
-    const q = `Lee ${fullMarkdownUrl}, Yo quiero hacer preguntas sobre esto.`;
+    const q = `Lee ${fullMarkdownUrl}, quiero hacer preguntas sobre esto.`;
 
     return [
       {
@@ -106,7 +52,7 @@ export function ViewOptions({
       },
       {
         title: 'Abrir en Scira AI',
-        href: `https://scira.ai/?${new URLSearchParams({
+        href: `https://scira.ai/?utm_source=docs.divisioncero.com/docs/kudo&${new URLSearchParams({
           q,
         })}`,
         icon: (
@@ -169,7 +115,7 @@ export function ViewOptions({
       },
       {
         title: 'Abrir en ChatGPT',
-        href: `https://chatgpt.com/?${new URLSearchParams({
+        href: `https://chatgpt.com/?utm_source=docs.divisioncero.com/docs/kudo&${new URLSearchParams({
           hints: 'search',
           q,
         })}`,
@@ -187,7 +133,7 @@ export function ViewOptions({
       },
       {
         title: 'Abrir en Claude',
-        href: `https://claude.ai/new?${new URLSearchParams({
+        href: `https://claude.ai/new?utm_source=docs.divisioncero.com/docs/kudo&${new URLSearchParams({
           q,
         })}`,
         icon: (
@@ -204,7 +150,7 @@ export function ViewOptions({
       },
       {
         title: 'Abrir en T3 Chat',
-        href: `https://t3.chat/new?${new URLSearchParams({
+        href: `https://t3.chat/new?utm_source=docs.divisioncero.com/docs/kudo&${new URLSearchParams({
           q,
         })}`,
         icon: <MessageCircleIcon />,
@@ -223,7 +169,7 @@ export function ViewOptions({
           }),
         )}
       >
-        Abrir
+        Abrir con IA
         <ChevronDown className="size-3.5 text-fd-muted-foreground" />
       </PopoverTrigger>
       <PopoverContent className="flex flex-col overflow-auto">
