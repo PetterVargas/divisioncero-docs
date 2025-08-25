@@ -2,13 +2,15 @@ import { source } from '@/lib/source';
 import {
   DocsPage,
   DocsBody,
-  DocsDescription,
-  DocsTitle,
 } from 'fumadocs-ui/page';
+import { LLMCopyButton, ViewOptions } from '@/components/page-actions';
 import { notFound } from 'next/navigation';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { getMDXComponents } from '@/mdx-components';
 import { Rate } from '@/components/rate';
+
+const owner = 'PetterVargas';
+const repo = 'divisioncero-docs';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -30,8 +32,17 @@ export default async function Page(props: {
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
+      <h1 className="text-3xl font-semibold">{page.data.title}</h1>
+      <p className="text-lg text-fd-muted-foreground">
+        {page.data.description}
+      </p>
+      <div className="flex flex-row gap-2 items-center border-b mb-6 pb-4">
+        <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
+        <ViewOptions
+          markdownUrl={`${page.url}.mdx`}
+          githubUrl={`https://github.com/${owner}/${repo}/blob/main/content/docs/${page.path}`}
+        />
+      </div>
       <DocsBody>
         <MDXContent
           components={getMDXComponents({
