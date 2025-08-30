@@ -1,15 +1,17 @@
 import Link from 'next/link';
-import { ArrowRight, Book, Rocket, Shield } from 'lucide-react';
+import { ArrowRight, Book, Rocket, Shield, FileText, Users, Target, Zap, Globe, CheckCircle } from 'lucide-react';
 
 export default function HomePage() {
   return (
-    <main className="flex flex-1 flex-col items-center py-16 px-4 min-h-[calc(100vh-var(--header-height)-var(--footer-height))]">
-      <div className="max-w-4xl w-full">
-        <div className="text-center mb-16">
-          <div className="flex flex-col items-center justify-center mb-2">
+    <main className="flex flex-1 flex-col min-h-[calc(100vh-var(--header-height)-var(--footer-height))] font-sans">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center py-24 px-4 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-fd-primary/5 via-transparent to-fd-secondary/5 pointer-events-none" />
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="flex flex-col items-center justify-center mb-8">
             <svg
-              width={95}
-              className="w-[80px] lg:w-[95px] mb-4"
+              width={120}
+              className="w-[100px] lg:w-[120px] mb-6"
               viewBox="0 0 2048 783"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -106,62 +108,215 @@ export default function HomePage() {
               />
             </svg>
           </div>
-          <h1 className="text-4xl font-bold tracking-tight mb-4">Documentación</h1>
-          <p className="text-xl text-fd-muted-foreground max-w-2xl mx-auto">
-            Guías completas para todos los proyectos, productos y servicios de DivisionCero
+          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-6 bg-gradient-to-br from-fd-foreground to-fd-muted-foreground bg-clip-text text-transparent">
+            Kudo
+          </h1>
+          <h2 className="text-2xl lg:text-3xl font-semibold mb-4 text-fd-foreground">
+            Framework de Ciberseguridad por y para LatAm
+          </h2>
+          <p className="text-xl text-fd-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
+            Marco completo de políticas, procedimientos y controles de ciberseguridad. 
+            Más de 85 templates organizacionales listos para implementar.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/docs/kudo"
+              className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-fd-primary-foreground bg-fd-primary hover:bg-fd-primary/90 rounded-lg transition-colors"
+            >
+              Explorar Kudo 
+              <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link 
+              href="https://divisioncero.com/home/kit-inicial-ciberseguridad"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-fd-foreground border border-fd-border hover:bg-fd-muted/50 rounded-lg transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Descargar Kit
+            </Link>
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          <Link 
-            href="/docs/cyberacademy" 
-            className="group flex flex-col gap-2 p-6 rounded-lg border border-border hover:border-fd-foreground/20 hover:bg-muted/50 transition-colors"
-          >
-            <div className="flex items-center gap-2">
-              <Rocket className="h-5 w-5" />
-              <h2 className="text-xl font-semibold">CyberAcademy</h2>
+      {/* Value Proposition */}
+      <section className="py-20 px-4 bg-fd-muted/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl font-bold mb-4">La fórmula es simple</h3>
+            <div className="text-2xl font-mono bg-fd-card border rounded-lg py-6 px-4 inline-block">
+              <span className="text-fd-primary">Coherencia</span> + Confianza = <span className="text-fd-foreground font-bold">Ciberseguridad</span>
             </div>
-            <p className="text-fd-muted-foreground">
-              Aprendamos solucionando problemas
-            </p>
-            <div className="flex items-center text-sm text-fd-primary mt-2 font-medium">
-              Leer más <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
+          </div>
 
-          <Link 
-            href="/docs/ciberseguridad-empresarial" 
-            className="group flex flex-col gap-2 p-6 rounded-lg border border-border hover:border-fd-foreground/20 hover:bg-muted/50 transition-colors"
-          >
-            <div className="flex items-center gap-2">
-              <Shield className="h-5 w-5" />
-              <h2 className="text-xl font-semibold">Ciberseguridad Empresarial</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-fd-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-fd-primary" />
+              </div>
+              <h4 className="text-xl font-semibold mb-3">8 Dominios</h4>
+              <p className="text-fd-muted-foreground">
+                Controles organizados por dominios de seguridad para una implementación estructurada
+              </p>
             </div>
-            <p className="text-fd-muted-foreground">
-              Metodología y Automatización en Ciberseguridad
-            </p>
-            <div className="flex items-center text-sm text-fd-primary mt-2 font-medium">
-              Explorar productos <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-fd-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="h-8 w-8 text-fd-primary" />
+              </div>
+              <h4 className="text-xl font-semibold mb-3">36 Controles</h4>
+              <p className="text-fd-muted-foreground">
+                Marco completo con 36 controles de ciberseguridad distribuidos en 8 dominios especializados
+              </p>
             </div>
-          </Link>
-
-          <Link 
-            href="/docs/kudo" 
-            className="group flex flex-col gap-2 p-6 rounded-lg border border-border hover:border-fd-foreground/20 hover:bg-muted/50 transition-colors"
-          >
-            <div className="flex items-center gap-2">
-              <Book className="h-5 w-5" />
-              <h2 className="text-xl font-semibold">Cybersecurity Kudo</h2>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-fd-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-fd-primary" />
+              </div>
+              <h4 className="text-xl font-semibold mb-3">85+ Políticas</h4>
+              <p className="text-fd-muted-foreground">
+                Templates completos de políticas organizacionales basados en estándares internacionales
+              </p>
             </div>
-            <p className="text-fd-muted-foreground">
-              Libro abierto de Ciberseguridad
-            </p>
-            <div className="flex items-center text-sm text-fd-primary mt-2 font-medium">
-              Explorar contenido <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold mb-6">¿Por qué usar Kudo?</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold">Confianza entre partes interesadas</h4>
+                    <p className="text-fd-muted-foreground text-sm">Aplica a inversores, gobiernos, empresas, clientes y usuarios</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold">Marco de referencia</h4>
+                    <p className="text-fd-muted-foreground text-sm">Establece políticas comunes para gestión de ciberseguridad</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold">Capacitación de equipos</h4>
+                    <p className="text-fd-muted-foreground text-sm">Formación inicial y continua de colaboradores</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold">Auditorías simplificadas</h4>
+                    <p className="text-fd-muted-foreground text-sm">Enfoque estructurado para evaluaciones internas y externas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-fd-card border border-fd-border/70 rounded-xl p-8 shadow-md">
+              <div className="text-center mb-6">
+                <h4 className="text-xl font-semibold mb-2">Estructura Organizacional</h4>
+                <p className="text-fd-muted-foreground text-sm">Modelo jerárquico con roles definidos</p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 p-3 bg-fd-muted/70 rounded-lg">
+                  <Users className="h-5 w-5 text-fd-primary" />
+                  <span className="font-medium">CEO - Responsabilidad ejecutiva</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-fd-muted/70 rounded-lg">
+                  <Shield className="h-5 w-5 text-fd-primary" />
+                  <span className="font-medium">CISO - Patrocinador del marco</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-fd-muted/70 rounded-lg">
+                  <Zap className="h-5 w-5 text-fd-primary" />
+                  <span className="font-medium">Equipos especializados - SOC, GRC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Secondary Products */}
+      <section className="py-20 px-4 bg-fd-muted/40">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">Productos Complementarios</h3>
+            <p className="text-xl text-fd-muted-foreground">
+              Además de Kudo, explora nuestros otros recursos de ciberseguridad
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Link 
+              href="/docs/cyberacademy" 
+              className="group flex flex-col gap-4 p-8 rounded-xl border border-fd-border/60 bg-fd-card/40 hover:border-fd-foreground/40 hover:bg-fd-card/70 transition-all duration-200 shadow-md"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-fd-primary/10 rounded-lg flex items-center justify-center">
+                  <Rocket className="h-6 w-6 text-fd-primary" />
+                </div>
+                <h4 className="text-2xl font-semibold">CyberAcademy</h4>
+              </div>
+              <p className="text-fd-muted-foreground text-lg">
+                Formación práctica en ciberseguridad: Aprendamos resolviendo problemas
+              </p>
+              <div className="flex items-center text-fd-primary font-medium mt-2">
+                Explorar formación <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link 
+              href="/docs/ciberseguridad-empresarial" 
+              className="group flex flex-col gap-4 p-8 rounded-xl border border-fd-border/60 bg-fd-card/40 hover:border-fd-foreground/40 hover:bg-fd-card/70 transition-all duration-200 shadow-md"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-fd-primary/10 rounded-lg flex items-center justify-center">
+                  <Shield className="h-6 w-6 text-fd-primary" />
+                </div>
+                <h4 className="text-2xl font-semibold">Ciberseguridad Empresarial</h4>
+              </div>
+              <p className="text-fd-muted-foreground text-lg">
+                Metodología y automatización en ciberseguridad para empresas
+              </p>
+              <div className="flex items-center text-fd-primary font-medium mt-2">
+                Ver servicios <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-6">Comienza tu implementación hoy</h3>
+          <p className="text-xl text-fd-muted-foreground mb-8">
+            Accede a más de 85 templates de políticas organizacionales y construye un marco de ciberseguridad sólido
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/docs/kudo/politicas"
+              className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-fd-primary-foreground bg-fd-primary hover:bg-fd-primary/90 rounded-lg transition-colors"
+            >
+              <FileText className="h-5 w-5 mr-2" />
+              Ver Políticas Templates
+              <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link 
+              href="/docs/kudo/dominios"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-fd-foreground border border-fd-border hover:bg-fd-muted/50 rounded-lg transition-colors"
+            >
+              <Book className="h-5 w-5 mr-2" />
+              Explorar Dominios
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

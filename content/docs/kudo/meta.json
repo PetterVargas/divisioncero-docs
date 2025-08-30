@@ -6,12 +6,16 @@
   "pages": [
     "---Introducción---",
     "index",
-    "correlacion-kudo-cloud-security-alliance",
+    "matriz-controles-nube-mcn",
     "responsabilidad-compartida",
+    "OSCAL",
     "---Framework Kudo---",
     "dominios",
     "controles",
     "---Documentos---",
-    "politicas"
+    "politicas",
+    "---Correlación---",
+    "correlacion-kudo-iso-27001-2022",
+    "correlacion-kudo-cloud-security-alliance"
   ]
 }
