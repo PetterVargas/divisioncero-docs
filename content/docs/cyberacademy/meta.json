@@ -6,6 +6,16 @@
   "pages": [
     "---Introducción---",
     "index",
-    "convenciones"
+    "convenciones",
+    "ruta-de-aprendizaje",
+    "---Cursos---",
+    "cor-coherencia-organizacional",
+    "cip-ciberseguridad-en-identidad-y-puntos-finales",
+    "cif-ciberseguridad-en-infraestructura",
+    "cap-ciberseguridad-en-aplicaciones",
+    "ccn-continuidad-y-cambios-del-negocio",
+    "thp-ciberseguridad-en-talento-humano-y-proveedores",
+    "dia-ciberseguridad-en-datos-e-inteligencia-artificial",
+    "adr-analisis-deteccion-y-respuesta-de-ciberseguridad"
   ]
 }

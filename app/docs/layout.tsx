@@ -1,4 +1,5 @@
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { Banner } from 'fumadocs-ui/components/banner';
 import type { ReactNode } from 'react';
 import { baseOptions } from '@/app/layout.config';
 import { source } from '@/lib/source';
@@ -6,10 +7,35 @@ import { LogInIcon, UserIcon, Linkedin, Twitter, Facebook, Github, Instagram, Yo
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <DocsLayout
-      tree={source.pageTree}
-      nav={baseOptions.nav}
-      links={[
+    <>
+      <Banner id="cybersecurity-tools"
+        variant="rainbow"
+        rainbowColors={[
+          '#39b298',
+          '#39b298',
+          'transparent',
+          '#39b298',
+          'transparent',
+          '#39b298',
+          'transparent',
+        ]}
+      >
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2">
+          <span>🚀 Nuevas herramientas online y gratuitas de Ciberseguridad</span>
+          <a
+            href="https://divisioncero.com/herramientas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline hover:text-white/80 transition-colors"
+          >
+            Dale un vistazo 👀 →
+          </a>
+        </div>
+      </Banner>
+      <DocsLayout
+        tree={source.pageTree}
+        nav={baseOptions.nav}
+        links={[
         {
           type: 'icon',
           url: 'https://github.com/PetterVargas/divisioncero-docs?utm_source=docs.divisioncero.com/docs/kudo',
@@ -86,7 +112,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <div className="col-span-12 md:col-span-6 ml-auto grid grid-cols-3 gap-4">
               {/* About Column */}
               <div className="flex flex-col gap-y-2.5">
-                <h3 className="font-medium mb-4">About</h3>
+                <h3 className="font-medium mb-4">Acerca de</h3>
                 <ul className="space-y-2">
                   <li><a href="/docs/kudo" className="text-sm hover:underline">Kudo</a></li>
                   <li><a href="https://divisioncero.com/herramientas?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
@@ -117,6 +143,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           </div>
         </div>
       </footer>
-    </DocsLayout>
+      </DocsLayout>
+    </>
   );
 }

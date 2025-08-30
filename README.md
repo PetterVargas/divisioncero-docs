@@ -1,45 +1,129 @@
-# divisioncero-docs
+# DivisionCero Documentation
 
-Documentación de DivisionCero, incluye CyberAcademy, Cybersecurity as a Service y Kudo (Libro abierto de Ciberseguridad)
+> **Framework de Ciberseguridad por y para LatAm**
 
-Run development server:
+Documentación completa de **Kudo**, el framework open-source de ciberseguridad para Latinoamérica, junto con CyberAcademy y servicios empresariales de ciberseguridad.
+
+## 🚀 Desarrollo Local
 
 ```bash
+# Instalar dependencias
+pnpm install
+
+# Ejecutar servidor de desarrollo
 pnpm run dev
-# or
-npm run dev
-# or
-yarn dev
+
+# Build para producción
+pnpm run build
+
+# Exportar sitio estático
+pnpm run export
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-## Explore
+## 🏗️ Tecnologías
 
-In the project, you can see:
+- **Framework**: Next.js 15.4.2 con React 19.1.0
+- **Documentation**: Fumadocs (UI y MDX)
+- **Styling**: Tailwind CSS 4.1.11
+- **Content**: MDX con soporte para matemáticas (KaTeX) y diagramas (Mermaid)
+- **Package Manager**: pnpm
+- **TypeScript**: 5.8.3
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `app/layout.config.tsx`: Shared options for layouts, optional but preferred to keep.
+## 🎯 Productos Principales
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
+### 🛡️ Kudo - Framework de Ciberseguridad
+- **85+ Templates** de políticas organizacionales.
+- **8 Dominios** de seguridad estructurados.
+- **Marco completo** de controles y procedimientos.
+- **Diseñado específicamente** para el contexto de LatAm.
 
-### Fumadocs MDX
+### 🎓 CyberAcademy
+- Formación práctica en ciberseguridad.
+- Metodología: Aprendamos resolviendo problemas.
+- Contenido hands-on y casos reales.
 
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
+### 🏢 Ciberseguridad Empresarial
+- Servicios de consultoría y automatización.
+- Metodologías probadas en el mercado.
+- Enfoque en implementación práctica.
 
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
+## 📁 Estructura del Proyecto
 
-## Learn More
+```
+divisioncero-docs/
+├── app/                          # Next.js App Router
+│   ├── (home)/                   # Landing page y páginas principales
+│   ├── docs/                     # Layout de documentación
+│   ├── api/search/               # API de búsqueda
+│   └── layout.tsx               # Layout global
+├── content/                      # Contenido MDX
+│   ├── blog/                     # Artículos del blog
+│   ├── docs/                     # Documentación principal
+│   │   ├── cyberacademy/         # Módulos de formación
+│   │   ├── ciberseguridad-empresarial/ # Servicios empresariales
+│   │   └── kudo/                 # Framework Kudo
+│   │       ├── dominios/         # Baselines por dominios
+│   │       └── politicas/        # Templates de políticas (85+)
+├── lib/                          # Utilities y configuración
+└── source.config.ts             # Configuración de Fumadocs
+```
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
+## 📋 Rutas Principales
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.vercel.app) - learn about Fumadocs
-- [Flaticon](https://www.flaticon.com/) - icons used in the project.
+| Ruta                      | Descripción                                           |
+| ------------------------- | ----------------------------------------------------- |
+| `/`                       | Landing page con Kudo como protagonista              |
+| `/docs/kudo`             | Framework principal de ciberseguridad                |
+| `/docs/kudo/politicas`   | 85+ templates de políticas organizacionales          |
+| `/docs/kudo/dominios`    | 8 dominios de seguridad estructurados                |
+| `/docs/cyberacademy`     | Formación práctica en ciberseguridad                 |
+| `/docs/ciberseguridad-empresarial` | Servicios empresariales           |
+| `/blog`                   | Artículos y actualizaciones                         |
+
+## 🎨 Características
+
+- **🌙 Tema oscuro/claro**: Soporte completo con next-themes
+- **🔍 Búsqueda avanzada**: API endpoint integrado
+- **📊 Matemáticas**: Renderizado LaTeX con KaTeX
+- **📈 Diagramas**: Soporte Mermaid para organigramas
+- **📱 Responsive**: Diseño optimizado para todos los dispositivos
+- **⚡ Performance**: Exportación estática optimizada
+
+## 🔧 Configuración
+
+### Source Configuration (`source.config.ts`)
+- Soporte para matemáticas con KaTeX
+- Procesamiento MDX con plugins personalizados  
+- Schemas de frontmatter validados con Zod
+
+### Layout Configuration (`app/layout.config.tsx`)
+- Configuración del navbar y navegación
+- Enlaces a productos y recursos
+- Integración con redes sociales
+
+## 📝 Contribuir
+
+1. Fork el repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit tus cambios (`git commit -am 'Agrega nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Crea un Pull Request
+
+## 📖 Recursos
+
+- **[Fumadocs](https://fumadocs.dev)** - Framework de documentación
+- **[Next.js Documentation](https://nextjs.org/docs)** - React framework
+- **[Tailwind CSS](https://tailwindcss.com)** - Utility-first CSS
+- **[KaTeX](https://katex.org)** - Renderizado matemático
+- **[Mermaid](https://mermaid.js.org)** - Generación de diagramas
+- **[Kit de Ciberseguridad](https://divisioncero.com/home/kit-inicial-ciberseguridad)** - Recursos adicionales
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia Open Source. Ver `LICENSE` para más detalles.
+
+---
+
+**Hecho con 💚 por y para la comunidad de ciberseguridad de LatAm**
