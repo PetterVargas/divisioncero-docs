@@ -107,7 +107,7 @@ function Footer() {
               <h3 className="font-medium mb-4">Productos</h3>
               <ul className="space-y-2">
                 <li><a href="https://divisioncero.com/cursos?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
-                <li><a href="https://divisioncero.com/ciberseguridad-empresarial?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Cibersecurity Empresarial</a></li>
+                <li><a href="https://divisioncero.com/ciberseguridad-empresarial?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Ciberseguridad Empresarial</a></li>
                 <li><a href="/" className="text-sm hover:underline">Documentación</a></li>
               </ul>
             </div>
@@ -116,9 +116,9 @@ function Footer() {
             <div className="flex flex-col gap-y-2.5">
               <h3 className="font-medium mb-4">Legal</h3>
               <ul className="space-y-2">
-                <li><a href="https://divisioncero.com/terms-of-service?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
-                <li><a href="https://divisioncero.com/privacy-policy?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
-                <li><a href="https://divisioncero.com/cookie-policy?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
+                <li><a href="https://divisioncero.com/terminos-de-servicio?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
+                <li><a href="https://divisioncero.com/politica-de-privacidad?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+                <li><a href="https://divisioncero.com/politica-de-cookies?utm_source=docs.divisioncero.com/docs/kudo" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
               </ul>
             </div>
           </div>

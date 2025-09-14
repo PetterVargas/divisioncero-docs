@@ -37,8 +37,8 @@ Los dominios Kudo cubren las **4 categorías principales de controles** del Anex
 |---------------------------|----------------------------|---------------------|
 | **A.5 - Controles organizacionales** | COR (Coherencia Organizacional) | 37 controles organizacionales |
 | **A.6 - Controles de personal** | THP (Talento Humano y Proveedores) | 8 controles de personal |
-| **A.7 - Controles físicos** | CIF (Ciberseguridad en Infraestructura) | 14 controles físicos y ambientales |
-| **A.8 - Controles tecnológicos** | CAP + CIF + CIP + ADR + DIA | 34 controles tecnológicos |
+| **A.7 - Controles físicos** | CNB (Ciberseguridad en Nube) | 14 controles físicos y ambientales |
+| **A.8 - Controles tecnológicos** | CAP + CNB + CIP + ADR + DIA | 34 controles tecnológicos |
 
 ### 📊 Mapeo Detallado por Dominio
 
@@ -67,7 +67,7 @@ graph LR
   subgraph KUDO_DOMAINS[🎯 Dominios Kudo]
     COR[COR<br/>Coherencia Organizacional<br/>4 controles]
     CIP[CIP<br/>Identidad y Puntos Finales<br/>6 controles]
-    CIF[CIF<br/>Ciberseguridad en Infraestructura<br/>5 controles]
+    CNB[CNB<br/>Ciberseguridad en Nube<br/>5 controles]
     CAP[CAP<br/>Ciberseguridad en Aplicaciones<br/>3 controles]
     CCN[CCN<br/>Continuidad y Cambios<br/>3 controles]
     THP[THP<br/>Talento Humano y Proveedores<br/>4 controles]
@@ -77,7 +77,7 @@ graph LR
   
   KUDO --> COR
   KUDO --> CIP
-  KUDO --> CIF
+  KUDO --> CNB
   KUDO --> CAP
   KUDO --> CCN
   KUDO --> THP
@@ -94,8 +94,8 @@ graph LR
   THP --> REQ7
   THP --> PEOPLE
   
-  CIF --> PHYSICAL
-  CIF --> TECH
+  CNB --> PHYSICAL
+  CNB --> TECH
   
   CAP --> TECH
   CIP --> TECH
@@ -103,7 +103,7 @@ graph LR
   ADR --> TECH
   DIA --> TECH
   
-  class COR,CAP,CCN,CIF,THP,CIP,ADR,DIA kudoDomain
+  class COR,CAP,CCN,CNB,THP,CIP,ADR,DIA kudoDomain
   class REQ4,REQ5,REQ6,REQ7,REQ8,REQ9,REQ10 isoReq
   class ORG,PEOPLE,PHYSICAL,TECH isoControl"
 />
@@ -118,7 +118,7 @@ El framework Kudo proporciona una **ruta de implementación práctica** para cum
 |------------------------|----------------------------|---------------|
 | **Fase 1: Fundamentos** | COR (Coherencia Organizacional) | Cláusulas 4, 5, 6, 10 + A.5 Organizacionales |
 | **Fase 2: Accesos** | CIP (Ciberseguridad en Identidad y Puntos Finales) | A.8 Tecnológicos (identidad) |
-| **Fase 3: Tecnología Base** | CIF (Ciberseguridad en Infraestructura) | A.7 Físicos + A.8 Tecnológicos |
+| **Fase 3: Tecnología Base** | CNB (Ciberseguridad en Nube) | A.7 Físicos + A.8 Tecnológicos |
 | **Fase 4: Aplicaciones** | CAP (Ciberseguridad en Aplicaciones) | A.8 Tecnológicos (desarrollo) |
 | **Fase 5: Continuidad** | CCN (Continuidad y Cambios del Negocio) | Cláusula 6 + A.8 Tecnológicos |
 | **Fase 6: Personas** | THP (Ciberseguridad en Talento Humano y Proveedores) | Cláusula 7 + A.6 Personal |
