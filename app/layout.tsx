@@ -3,6 +3,7 @@ import { RootProvider } from 'fumadocs-ui/provider';
 import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
 import 'katex/dist/katex.css';
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -45,6 +46,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return (
     <html lang="es" suppressHydrationWarning>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XEZ2YDSE2K"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XEZ2YDSE2K');
+          `}
+        </Script>
         <RootProvider
           search={{
             options: {

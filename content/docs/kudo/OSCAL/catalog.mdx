@@ -115,9 +115,9 @@ La organización debe mantener planes de continuidad del negocio que incluyan co
 **Declaración del Control**:
 La organización debe implementar procesos de gestión de cambios que incluyan evaluación de impacto en seguridad.
 
-## CIF - Ciberseguridad en Infraestructura
+## CNB - Ciberseguridad en Nube
 
-### CIF-001: Hardening de Sistemas
+### CNB-001: Hardening de Sistemas
 **Objetivo**: Implementar configuraciones seguras  
 **Tipo**: Técnico  
 **Familia**: System Hardening  
@@ -126,7 +126,7 @@ La organización debe implementar procesos de gestión de cambios que incluyan e
 **Declaración del Control**:
 La organización debe aplicar configuraciones de seguridad basadas en benchmarks reconocidos para todos los sistemas.
 
-### CIF-002: Gestión de Parches
+### CNB-002: Gestión de Parches
 **Objetivo**: Mantener sistemas actualizados  
 **Tipo**: Técnico  
 **Familia**: Patch Management  
@@ -222,16 +222,16 @@ graph TD
     COR[Coherencia Organizacional] --> ADR[Análisis, Detección y Respuesta]
     COR --> CAP[Ciberseguridad en Aplicaciones]
     COR --> CCN[Continuidad del Negocio]
-    COR --> CIF[Ciberseguridad en Infraestructura]
+    COR --> CNB[Ciberseguridad en Nube]
     COR --> CIP[Identidad y Endpoints]
     COR --> DIA[Datos e IA]
     COR --> THP[Talento Humano]
     
     ADR --> CCN
-    CAP --> CIF
+    CAP --> CNB
     CIP --> DIA
     THP --> CAP
-    THP --> CIF
+    THP --> CNB
     THP --> CIP
 ```
 
