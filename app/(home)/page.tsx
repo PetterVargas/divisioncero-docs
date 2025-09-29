@@ -308,7 +308,7 @@ export default function HomePage() {
               <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
-              href="/docs/kudo/dominios"
+              href="/docs/kudo/dominios-y-controles/"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-fd-foreground border border-fd-border hover:bg-fd-muted/50 rounded-lg transition-colors"
             >
               <Book className="h-5 w-5 mr-2" />
