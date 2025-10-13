@@ -127,7 +127,7 @@ export default function HomePage() {
               <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
-              href="https://divisioncero.com/home/kit-inicial-ciberseguridad"
+              href="https://divisioncero.com/home/kit-inicio-ciberseguridad"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-fd-foreground border border-fd-border hover:bg-fd-muted/50 rounded-lg transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -247,14 +247,16 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Productos Complementarios</h3>
             <p className="text-xl text-fd-muted-foreground">
-              Además de Kudo, explora nuestros otros recursos de ciberseguridad
+              Además de Kudo, explora nuestros otros recursos de Ciberseguridad
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link 
-              href="/docs/cyberacademy" 
+              href="https://divisioncero.com/cursos"
               className="group flex flex-col gap-4 p-8 rounded-xl border border-fd-border/60 bg-fd-card/40 hover:border-fd-foreground/40 hover:bg-fd-card/70 transition-all duration-200 shadow-md"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-fd-primary/10 rounded-lg flex items-center justify-center">
@@ -271,8 +273,10 @@ export default function HomePage() {
             </Link>
 
             <Link 
-              href="/docs/ciberseguridad-empresarial" 
+              href="https://divisioncero.com/home/empresas"
               className="group flex flex-col gap-4 p-8 rounded-xl border border-fd-border/60 bg-fd-card/40 hover:border-fd-foreground/40 hover:bg-fd-card/70 transition-all duration-200 shadow-md"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-fd-primary/10 rounded-lg flex items-center justify-center">
@@ -308,7 +312,7 @@ export default function HomePage() {
               <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
-              href="/docs/kudo/dominios-y-controles/"
+              href="/docs/kudo#-dominios"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-fd-foreground border border-fd-border hover:bg-fd-muted/50 rounded-lg transition-colors"
             >
               <Book className="h-5 w-5 mr-2" />

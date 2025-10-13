@@ -77,7 +77,7 @@ divisioncero-docs/
 | `/`                       | Landing page con Kudo como protagonista              |
 | `/docs/kudo`             | Framework principal de ciberseguridad                |
 | `/docs/kudo/politicas`   | 85+ templates de políticas organizacionales          |
-| `/docs/kudo/dominios-y-controles`    | 8 dominios de seguridad estructurados                |
+| `/docs/kudo#-dominios`    | 8 dominios de seguridad estructurados                |
 | `/docs/cyberacademy`     | Formación práctica en ciberseguridad                 |
 | `/docs/ciberseguridad-empresarial` | Servicios empresariales           |
 | `/blog`                   | Artículos y actualizaciones                         |
@@ -118,7 +118,7 @@ divisioncero-docs/
 - **[Tailwind CSS](https://tailwindcss.com)** - Utility-first CSS
 - **[KaTeX](https://katex.org)** - Renderizado matemático
 - **[Mermaid](https://mermaid.js.org)** - Generación de diagramas
-- **[Kit de Ciberseguridad](https://divisioncero.com/home/kit-inicial-ciberseguridad)** - Recursos adicionales
+- **[Kit de Ciberseguridad](https://divisioncero.com/home/kit-inicio-ciberseguridad)** - Recursos adicionales
 
 ## 📄 Licencia
 
