@@ -137,4 +137,4 @@ pnpm run deploy     # Export
 - **Repositorio**: GitHub (enlace en header del sitio)
 - **Framework**: [Fumadocs](https://fumadocs.vercel.app)
 - **Next.js**: [Documentación oficial](https://nextjs.org/docs)
-- **Kit de Ciberseguridad**: [divisioncero.com](https://divisioncero.com/home/kit-inicial-ciberseguridad)
+- **Kit de Ciberseguridad**: [divisioncero.com](https://divisioncero.com/home/kit-inicio-ciberseguridad)

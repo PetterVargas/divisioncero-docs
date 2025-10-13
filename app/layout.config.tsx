@@ -41,19 +41,13 @@ export const baseOptions: BaseLayoutProps = {
     {
       icon: <GraduationCapIcon />,
       text: 'CyberAcademy',
-      url: '/docs/cyberacademy',
+      url: 'https://divisioncero.com/cursos?utm_source=docs.divisioncero.com/docs/kudo',
       secondary: false,
     },
     {
       icon: <PackageIcon />,
       text: 'Ciberseguridad Empresarial',
       url: '/docs/ciberseguridad-empresarial',
-      secondary: false,
-    },
-    {
-      icon: <GraduationCapIcon />,
-      text: 'Cursos',
-      url: 'https://divisioncero.com/cursos?utm_source=docs.divisioncero.com/docs/kudo',
       secondary: false,
     },
     {
