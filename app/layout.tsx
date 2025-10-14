@@ -58,13 +58,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             gtag('config', 'G-XEZ2YDSE2K');
           `}
         </Script>
-        <RootProvider
-          search={{
-            options: {
-              type: 'static',
-            },
-          }}
-        >
+        <RootProvider>
           {children}
         </RootProvider>
       </body>
